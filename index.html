@@ -18,7 +18,97 @@
     />
   </head>
   <body>
-    sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy
+    <div class="container mt-5">
+      <h2>
+        Cho người dùng nhập vào số nguyên và lưu trữ trong mảng. Thiết kế layout
+        cho người dùng chọn thực hiện các chức năng bên dưới:
+      </h2>
+
+      <input placeholder="Nhập số nguyên" type="number" id="soNguyen" />
+      <button id="nhapSo" class="btn btn-success">Nhập số</button>
+
+      <div class="function-1">
+        <h3>1. Tổng các số dương trong mảng.</h3>
+        <button id="tinhTong" class="btn btn-info">Tính tổng số dương</button>
+        <p id="answer-1"></p>
+      </div>
+
+      <div class="funtion-2">
+        <h3>2. Đếm có bao nhiêu số dương trong mảng.</h3>
+        <button id="demSoDuong" class="btn btn-info">Đếm số dương</button>
+        <p id="answer-2"></p>
+      </div>
+
+      <div class="function-3">
+        <h3>3. Tìm số nhỏ nhất trong mảng.</h3>
+        <button id="timMin" class="btn btn-info">Tìm số nhỏ nhất</button>
+        <p id="answer-3"></p>
+      </div>
+
+      <div class="function-4">
+        <h3>4. Tìm số dương nhỏ nhất trong mảng.</h3>
+        <button id="timDuongMin" class="btn btn-info">
+          Tìm số dương nhỏ nhất
+        </button>
+        <p id="answer-4"></p>
+      </div>
+
+      <div class="function-5">
+        <h3>
+          5. Tìm số chẵn cuối cùng trong mảng. Nếu mảng không có giá trị chẵn
+          thì trả về -1.
+        </h3>
+        <button id="timSoChan" class="btn btn-info">
+          Tìm số chẵn cuối cùng
+        </button>
+        <p id="answer-5"></p>
+      </div>
+
+      <div class="function-6">
+        <h3>
+          6. Đổi chỗ 2 giá trị trong mảng theo vị trí (Cho nhập vào 2 vị trí
+          muốn đổi chỗ giá trị).
+        </h3>
+        <button id="doiViTri" class="btn btn-info">Đổi vị trí</button>
+        <p id="answer-6"></p>
+      </div>
+
+      <div class="function-7">
+        <h3>7. Sắp xếp mảng theo thứ tự tăng dần.</h3>
+        <button id="sapXep" class="btn btn-info">Sắp xếp</button>
+        <p id="answer-7"></p>
+      </div>
+
+      <div class="function-8">
+        <h3>
+          8. Tìm số nguyên tố đầu tiên trong mảng. Nếu mảng không có số nguyên
+          tố thì trả về – 1.
+        </h3>
+        <button id="timSNT" class="btn btn-info">Tìm số nguyên tố</button>
+        <p id="answer-8"></p>
+      </div>
+
+      <div class="function-9">
+        <h3>
+          9. Nhập thêm 1 mảng số thực, tìm xem trong mảng có bao nhiêu số
+          nguyên?
+        </h3>
+        <input placeholder="Nhập số thực" type="number" id="nhapSoThuc" />
+        <button id="nhapSoThuc" class="btn btn-success">Thêm số</button>
+        <p></p>
+        <button id="demSoNguyen" class="btn btn-info">Đếm số nguyên</button>
+        <p id="answer-9"></p>
+      </div>
+
+      <div class="function-10">
+        <h3>
+          10. So sánh số lượng số dương và số lượng số âm xem số nào nhiều hơn.
+        </h3>
+        <button id="soSanh" class="btn btn-info">So sánh</button>
+        <p id="answer-10"></p>
+      </div>
+    </div>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
