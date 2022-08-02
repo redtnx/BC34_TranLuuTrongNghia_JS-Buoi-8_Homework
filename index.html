@@ -26,6 +26,7 @@
 
       <input placeholder="Nhập số nguyên" type="number" id="soNguyen" />
       <button id="nhapSo" class="btn btn-success">Nhập số</button>
+      <p id="inSo"></p>
 
       <div class="function-1">
         <h3>1. Tổng các số dương trong mảng.</h3>
@@ -69,6 +70,8 @@
           6. Đổi chỗ 2 giá trị trong mảng theo vị trí (Cho nhập vào 2 vị trí
           muốn đổi chỗ giá trị).
         </h3>
+        <input placeholder="Vị trí 1" type="number" id="viTri1" />
+        <input placeholder="Vị trí 2" type="number" id="viTri2" />
         <button id="doiViTri" class="btn btn-info">Đổi vị trí</button>
         <p id="answer-6"></p>
       </div>
@@ -82,7 +85,7 @@
       <div class="function-8">
         <h3>
           8. Tìm số nguyên tố đầu tiên trong mảng. Nếu mảng không có số nguyên
-          tố thì trả về – 1.
+          tố thì trả về -1.
         </h3>
         <button id="timSNT" class="btn btn-info">Tìm số nguyên tố</button>
         <p id="answer-8"></p>
@@ -116,11 +119,11 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./js/index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
       integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
