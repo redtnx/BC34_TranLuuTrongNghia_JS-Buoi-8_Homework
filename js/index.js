@@ -165,19 +165,104 @@ document.getElementById("sapXep").onclick = function () {
 };
 
 // Câu 8:
-document.getElementById("timSNT").onclick = function () {
-  var soNT = 0;
+function checkSNT(n) {
+  var flag = 1;
 
-  for (var i = 0; i < listNumber.length; i++) {
-    var checkSNT = true;
-    for (var i = 2; i <= Math.sqrt(listNumber[i]); i++) {
-      if (listNumber[i] % 2 === 0) {
-        checkSNT = false;
-        break;
-      }
+  if (n < 2) {
+    return (flag = 0);
+  }
+
+  var i = 2;
+  while (i < n) {
+    if (n % i == 0) {
+      flag = 0;
+      break;
     }
-    if (checkSNT) {
-      soNT = iSo + " ";
+    i++;
+  }
+  return flag;
+}
+
+var soNT = 0;
+
+document.getElementById("timSNT").onclick = function () {
+  for (let i = 0; i < listNumber.length; i++) {
+    if (checkSNT(listNumber[i]) == 1) {
+      soNT = "Số nguyên tố đầu tiên là: " + listNumber[i];
+      break;
+    } else {
+      soNT = -1;
     }
   }
+  document.getElementById("answer-8").innerHTML = soNT;
+};
+
+// Câu 9:
+var soThuc = [];
+
+document.getElementById("nhapSoThuc").onclick = function () {
+  var number = document.getElementById("soThuc").value * 1;
+  var content = "";
+
+  soThuc.push(number);
+
+  for (var i = 0; i < soThuc.length; i++) {
+    content += soThuc[i] + ", ";
+    document.getElementById("mangSoThuc").innerHTML = content;
+  }
+};
+
+document.getElementById("demSoNguyen").onclick = function () {
+  var count = 0;
+  for (var i = 0; i < soThuc.length; i++) {
+    if (Number.isInteger(soThuc[i])) {
+      count += 1;
+    }
+  }
+  document.getElementById("answer-9").innerHTML =
+    "Trong mảng có: " + count + " số nguyên";
+};
+
+// Câu 10:
+document.getElementById("soSanh").onclick = function () {
+  var countAm = 0;
+  var countDuong = 0;
+  var ketQua = "";
+  for (var i = 0; i < listNumber.length; i++) {
+    if (listNumber[i] < 0) {
+      countAm += 1;
+    } else {
+      countDuong += 1;
+    }
+  }
+  if (countAm < countDuong) {
+    ketQua =
+      "<p>Có " +
+      countAm +
+      " số âm</p>" +
+      "Có " +
+      countDuong +
+      " số dương</p>" +
+      "<p>Số dương nhiều hơn số âm</p>";
+  } else if (countAm > countDuong) {
+    ketQua =
+      "<p>Có " +
+      countAm +
+      " số âm</p>" +
+      "Có " +
+      countDuong +
+      " số dương</p>" +
+      "<p>Số âm nhiều hơn số dương</p>";
+  } else if (countAm === countDuong) {
+    ketQua =
+      "<p>Có " +
+      countAm +
+      " số âm</p>" +
+      "Có " +
+      countDuong +
+      " số dương</p>" +
+      "<p>Số lượng 2 số bằng nhau</p>";
+  }
+
+  document.getElementById("answer-10").innerHTML = ketQua;
 };
