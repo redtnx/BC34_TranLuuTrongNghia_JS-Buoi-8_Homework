@@ -115,9 +115,10 @@ document.getElementById("timSoChan").onclick = function () {
   var chanLast = listChan[iLast];
   if (listChan.length === 0) {
     chanLast = -1;
-    document.getElementById("answer-5a").innerHTML = "-1";
+    document.getElementById("answer-5").innerHTML = "-1";
     return;
   }
+
   for (var i = 0; i < listChan.length; i++) {
     if (i > iLast) {
       chanLast = listChan[i];
